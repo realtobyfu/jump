@@ -24,6 +24,7 @@
         document.getElementById('right').value = abc;
         $(".jump").text("< JUMP")
         $(".jump").attr("onClick", "jump_left()");
+        preventDefault();
       }
 
       function jump_left() {
@@ -32,6 +33,7 @@
         document.getElementById('right').value = abc;
         $(".jump").text("JUMP >");
         $(".jump").attr("onClick", "jump_right()");
+        preventDefault();
       }
     </script>
 
