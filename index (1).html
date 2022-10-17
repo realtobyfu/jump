@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JUMP</title>
+</head>
+
+<body>
+    <form>
+      <input type="text" name="name" id="left" style="display: inline;">
+      <button name="jump" class="jump" style="display: inline;" onClick="jump_right()">JUMP ></button>
+      <input type="text" name="name" id="right" style="display: inline;">
+    </form>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <script language="JavaScript">
+      function jump_right() {
+        var abc = document.getElementById('left').value;
+        document.getElementById('left').value = "";
+        document.getElementById('right').value = abc;
+        $(".jump").text("< JUMP")
+        $(".jump").attr("onClick", "jump_left()");
+      }
+
+      function jump_left() {
+        var abc = document.getElementById('right').value;
+        document.getElementById('right').value = "";
+        document.getElementById('right').value = abc;
+        $(".jump").text("JUMP >");
+        $(".jump").attr("onClick", "jump_right()");
+      }
+    </script>
+
+</body>
+
+</html>
