@@ -24,16 +24,16 @@
         document.getElementById('right').value = abc;
         $(".jump").text("< JUMP")
         $(".jump").attr("onClick", "jump_left()");
-        preventDefault();
+        event.preventDefault();
       }
 
       function jump_left() {
         var abc = document.getElementById('right').value;
         document.getElementById('right').value = "";
-        document.getElementById('right').value = abc;
+        document.getElementById('left').value = abc;
         $(".jump").text("JUMP >");
         $(".jump").attr("onClick", "jump_right()");
-        preventDefault();
+        event.preventDefault();
       }
     </script>
 
